@@ -1,0 +1,38 @@
+/* A good reset for projects like this */
+* {
+    box-sizing: border-box; /* This is the key! It makes sizing predictable. */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #111;
+    display: flex; /* Use flexbox to center the container */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#particle-container {
+    display: grid;
+    width: 80vmin;
+    height: 80vmin;
+    /* Explicitly set gap to 0 to remove all space between cells */
+    gap: 0; 
+}
+
+.dot {
+    /* These ensure the dot perfectly fills its grid cell */
+    width: 100%;
+    height: 100%;
+    background-color: #555;
+    border-radius: 50%;
+    
+    /* Make the color change smoother */
+    transition: background-color 0.5s ease;
+}
+
+.dot:hover {
+    background-color: #00ffff;
+}
